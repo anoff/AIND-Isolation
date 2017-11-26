@@ -210,21 +210,21 @@ class MinimaxPlayer(IsolationPlayer):
                 testing.
         """
 
-        # test for abort
-        def term_test(depth):
+
+        def min_value(game, depth):
             if self.time_left() < self.TIMER_THRESHOLD:
                 raise SearchTimeout()
-            if not depth:
+            if depth < 1:
                 return self.score(game, self)
-            return None
-        def min_value(game, depth):
-            if term_test(depth): return term_test(depth)
             value = float('inf')
             for m in game.get_legal_moves():
                 value = min(value, max_value(game.forecast_move(m), depth - 1))
             return value
         def max_value(game, depth):
-            if term_test(depth): return term_test(depth)
+            if self.time_left() < self.TIMER_THRESHOLD:
+                raise SearchTimeout()
+            if depth < 1:
+                return self.score(game, self)
             value = float('-inf')
             for m in game.get_legal_moves():
                 value = max(value, min_value(game.forecast_move(m), depth - 1))
