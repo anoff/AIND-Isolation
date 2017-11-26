@@ -23,46 +23,7 @@ Columns for the stragies are provided as `Wins:Losses`
 |   |   |   |   |   |   |
 | Win Rate  |   |  61.4% | 63.8%  | 61.9%  | 65.2%  |
 
-                        *************************
-                             Playing Matches
-                        *************************
-
- Match #   Opponent    AB_Improved   AB_Custom   AB_Custom_2  AB_Custom_3
-                        Won | Lost   Won | Lost   Won | Lost   Won | Lost
-    1       Random       5  |   5    10  |   0    10  |   0     9  |   1
-    2       MM_Open      7  |   3     6  |   4     7  |   3     9  |   1
-    3      MM_Center     9  |   1     8  |   2     7  |   3     9  |   1
-    4     MM_Improved    4  |   6     6  |   4     8  |   2     6  |   4
-    5       AB_Open      7  |   3     6  |   4     6  |   4     5  |   5
-    6      AB_Center     7  |   3     6  |   4     5  |   5     5  |   5
-    7     AB_Improved    4  |   6     5  |   5     4  |   6     5  |   5
---------------------------------------------------------------------------
-           Win Rate:      61.4%        67.1%        67.1%        68.6%
-
-
- Match #   Opponent    AB_Improved   AB_Custom   AB_Custom_2  AB_Custom_3
-                        Won | Lost   Won | Lost   Won | Lost   Won | Lost
-    1       Random       7  |   3     7  |   3     6  |   4     9  |   1
-    2       MM_Open      6  |   4     6  |   4     8  |   2     4  |   6
-    3      MM_Center     7  |   3     5  |   5     7  |   3     7  |   3
-    4     MM_Improved    7  |   3     7  |   3     7  |   3     7  |   3
-    5       AB_Open      5  |   5     5  |   5     5  |   5     4  |   6
-    6      AB_Center     6  |   4     5  |   5     7  |   3     6  |   4
-    7     AB_Improved    7  |   3     7  |   3     2  |   8     4  |   6
---------------------------------------------------------------------------
-           Win Rate:      64.3%        60.0%        60.0%        58.6%
-
- Match #   Opponent    AB_Improved   AB_Custom   AB_Custom_2  AB_Custom_3
-                        Won | Lost   Won | Lost   Won | Lost   Won | Lost
-    1       Random       7  |   3     8  |   2     8  |   2     9  |   1
-    2       MM_Open      6  |   4     8  |   2     5  |   5     9  |   1
-    3      MM_Center     8  |   2     8  |   2     7  |   3     7  |   3
-    4     MM_Improved    4  |   6     5  |   5     5  |   5     5  |   5
-    5       AB_Open      8  |   2     5  |   5     7  |   3     7  |   3
-    6      AB_Center     3  |   7     6  |   4     4  |   6     6  |   4
-    7     AB_Improved    5  |   5     5  |   5     5  |   5     5  |   5
---------------------------------------------------------------------------
-           Win Rate:      58.6%        64.3%        58.6%        68.6%
+> Overall the third strategy seems to perform the best.
 
 ## Strategy 1
 
