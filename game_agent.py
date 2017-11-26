@@ -330,8 +330,43 @@ class AlphaBetaPlayer(IsolationPlayer):
                 each helper function or else your agent will timeout during
                 testing.
         """
+        def min_value(game, depth, alpha, beta):
+            if self.time_left() < self.TIMER_THRESHOLD:
+                raise SearchTimeout()
+            if depth < 1:
+                return self.score(game, self)
+            value = float('inf')
+            for m in game.get_legal_moves():
+                value = min(value, max_value(game.forecast_move(m), depth - 1, alpha, beta))
+                if value <= alpha:
+                    return value
+                if value < beta:
+                    beta = value
+            return value
+        def max_value(game, depth, alpha, beta):
+            if self.time_left() < self.TIMER_THRESHOLD:
+                raise SearchTimeout()
+            if depth < 1:
+                return self.score(game, self)
+            value = float('-inf')
+            for m in game.get_legal_moves():
+                value = max(value, min_value(game.forecast_move(m), depth - 1, alpha, beta))
+                if value >= beta:
+                    return value
+                if value > alpha:
+                    alpha = value
+            return value
+
+        # start the minmax decision
         if self.time_left() < self.TIMER_THRESHOLD:
             raise SearchTimeout()
 
-        # TODO: finish this function!
-        raise NotImplementedError
+        best_move = (-1, -1)
+        best_score = float('-inf')
+        for m in game.get_legal_moves():
+            score = min_value(game.forecast_move(m), depth - 1, alpha, beta)
+            if score > best_score:
+                best_score = score
+                best_move = m
+                alpha = max(alpha, score)
+        return best_move
